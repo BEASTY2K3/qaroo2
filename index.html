@@ -3,560 +3,482 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Qaroo India | Premier Tech Academy & Software Consultancy</title>
-  <meta name="description" content="Coimbatore & Chennai's leading IT training institute. 17+ certified courses in Full Stack, AI/ML, Data Science, UX Design & VFX. 10,000+ students placed.">
-  <meta name="keywords" content="qaroo, coding academy coimbatore, software training coimbatore, IT course chennai, full stack training">
+  <title>Qaroo India | Tech Academy & Engineering Consultancy</title>
+  <meta name="description" content="Coimbatore & Chennai's leading IT training academy. 17+ programs in Full Stack, AI/ML, Data Science, Cyber Security & UI/UX with 10,000+ graduates placed.">
+  <meta name="keywords" content="qaroo india, software training coimbatore, IT courses chennai">
   <link rel="canonical" href="https://qaroo.in/index.html">
-
-  <!-- OpenGraph -->
-  <meta property="og:title" content="Qaroo India | Premier Tech Academy & Software Consultancy">
-  <meta property="og:description" content="Coimbatore & Chennai's leading IT training institute. 17+ certified courses in Full Stack, AI/ML, Data Science, UX Design & VFX. 10,000+ students placed.">
+  <meta property="og:title" content="Qaroo India | Tech Academy & Engineering Consultancy">
+  <meta property="og:description" content="Coimbatore & Chennai's leading IT training academy. 17+ programs in Full Stack, AI/ML, Data Science, Cyber Security & UI/UX with 10,000+ graduates placed.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://qaroo.in/index.html">
   <meta property="og:image" content="https://qaroo.in/assets/branding/logos/logo-two.png">
-  <meta property="og:site_name" content="Qaroo India">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Qaroo India | Premier Tech Academy & Software Consultancy">
-  <meta name="twitter:description" content="Coimbatore & Chennai's leading IT training institute. 17+ certified courses in Full Stack, AI/ML, Data Science, UX Design & VFX. 10,000+ students placed.">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/branding/logos/logo-two.png">
-
-  <!-- Fonts + CSS -->
+  <link rel="icon" href="assets/branding/logos/logo-two.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="assets/css/style.css?v=3.0">
-
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=8.0">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Qaroo India Private Limited","url":"https://qaroo.in","logo":"https://qaroo.in/assets/branding/logos/logo-two.png","address":{"@type":"PostalAddress","addressLocality":"Coimbatore","addressRegion":"Tamil Nadu","addressCountry":"IN"}}</script>
 </head>
 <body>
 
-  <!-- ====================================================
-       SITE HEADER / NAVIGATION
-       ==================================================== -->
-  <header class="site-header" id="site-header">
-    <div class="container nav-wrap">
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="pl-inner">
+      <div class="pl-word">QAROO</div>
+      <div class="pl-bar"></div>
+    </div>
+  </div>
 
-      <!-- Logo -->
-      <a href="index.html" class="nav-logo" id="nav-logo">
-        <img src="assets/branding/logos/logo-two.png" alt="Qaroo India Logo">
+  <!-- Scroll Progress -->
+  <div id="scroll-progress"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="main-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/branding/logos/logo-two.png" alt="Qaroo India">
       </a>
 
-      <!-- Desktop Nav -->
-      <nav class="nav-menu" id="desktop-nav" aria-label="Main Navigation">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-
-        <!-- Programs Dropdown -->
-        <div class="nav-dropdown">
-          <a href="#" class="nav-link" aria-haspopup="true">
-            Programs
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </a>
-          <div class="dropdown-panel" aria-label="Programs submenu">
-            <a href="full_stack.html" class="dropdown-item">Full Stack Dev</a>
-            <a href="full_stack_java.html" class="dropdown-item">Full Stack Java</a>
-            <a href="python_development.html" class="dropdown-item">Python Dev</a>
-            <a href="data_science.html" class="dropdown-item">Data Science</a>
-            <a href="business_analytics.html" class="dropdown-item">Business Analytics</a>
-            <a href="ai_intelligence.html" class="dropdown-item">Artificial Intelligence</a>
-            <a href="machine_learning.html" class="dropdown-item">Machine Learning</a>
-            <a href="cyber_security.html" class="dropdown-item">Cyber Security</a>
-            <a href="ethical_hacking.html" class="dropdown-item">Ethical Hacking</a>
-            <a href="digital_marketing.html" class="dropdown-item">Digital Marketing</a>
-            <a href="graphical_designing.html" class="dropdown-item">Graphic Design</a>
-            <a href="ui_ux.html" class="dropdown-item">UI / UX Design</a>
-            <a href="2d_animation.html" class="dropdown-item">2D Animation</a>
-            <a href="3d_animation.html" class="dropdown-item">3D Animation</a>
-            <a href="multi_animat.html" class="dropdown-item">Multimedia</a>
-            <a href="software_testing.html" class="dropdown-item">Software Testing</a>
-            <a href="visual_effects.html" class="dropdown-item">Visual Effects</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav-drop">
+          <a href="#">Programs ↓</a>
+          <div class="nav-drop-menu">
+            <a href="full_stack.html">Full Stack</a>
+            <a href="python_development.html">Python</a>
+            <a href="data_science.html">Data Science</a>
+            <a href="ai_intelligence.html">AI / ML</a>
+            <a href="cyber_security.html">Cyber Security</a>
+            <a href="ui_ux.html">UI / UX</a>
+            <a href="software_testing.html">Testing</a>
+            <a href="2d_animation.html">2D Animation</a>
+            <a href="3d_animation.html">3D Animation</a>
+            <a href="visual_effects.html">VFX</a>
           </div>
-        </div>
+        </li>
+        <li><a href="Consulting.html">Consulting</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
 
-        <a href="Consulting.html" class="nav-link">Consulting</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
-
-      <!-- Nav Actions -->
-      <div class="nav-actions">
-        <button class="nav-search-btn" id="search-trigger" aria-label="Open Search">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <div class="nav-r">
+        <button class="nav-search-btn" id="search-trigger" aria-label="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
         </button>
-        <a href="contact.html" class="btn btn-primary" id="cta-nav-btn">Free Counseling</a>
-        <button class="burger-btn" id="burger-btn" aria-label="Open Menu">
+        <a href="contact.html" class="nav-cta">Free Counseling</a>
+        <button class="nav-burger" id="nav-burger" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
-  </header>
-
-  <!-- ====================================================
-       MOBILE DRAWER
-       ==================================================== -->
-  <div class="drawer-overlay" id="drawer-overlay"></div>
-  <nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
-    <div class="drawer-close">
-      <button id="drawer-close" aria-label="Close Menu">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-    </div>
-    <div class="drawer-nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="full_stack.html">Full Stack Development</a>
-      <a href="python_development.html">Python Development</a>
-      <a href="data_science.html">Data Science</a>
-      <a href="ai_intelligence.html">Artificial Intelligence</a>
-      <a href="machine_learning.html">Machine Learning</a>
-      <a href="cyber_security.html">Cyber Security</a>
-      <a href="ui_ux.html">UI / UX Design</a>
-      <a href="software_testing.html">Software Testing</a>
-      <a href="2d_animation.html">2D Animation</a>
-      <a href="3d_animation.html">3D Animation</a>
-      <a href="visual_effects.html">Visual Effects</a>
-      <a href="Consulting.html">Consulting</a>
-      <a href="contact.html">Contact Us</a>
-    </div>
   </nav>
 
-  <!-- ====================================================
-       SEARCH OVERLAY
-       ==================================================== -->
-  <div class="search-overlay" id="search-overlay" role="dialog" aria-label="Course Search">
-    <div class="search-box">
-      <div class="search-input-wrap">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:#8a8aaa;flex-shrink:0"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="text" id="search-input" placeholder="Search programs — e.g. Python, UI/UX, AI…" autocomplete="off">
-        <button class="btn btn-primary search-close" id="search-close">Close</button>
+  <!-- Mobile Drawer -->
+  <nav class="m-drawer" id="m-drawer">
+    <button class="m-drawer-close" id="drawer-close">✕</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="full_stack.html">Full Stack</a>
+    <a href="python_development.html">Python Dev</a>
+    <a href="data_science.html">Data Science</a>
+    <a href="ai_intelligence.html">Artificial Intelligence</a>
+    <a href="machine_learning.html">Machine Learning</a>
+    <a href="ui_ux.html">UI / UX Design</a>
+    <a href="cyber_security.html">Cyber Security</a>
+    <a href="software_testing.html">Software Testing</a>
+    <a href="2d_animation.html">2D Animation</a>
+    <a href="3d_animation.html">3D Animation</a>
+    <a href="visual_effects.html">Visual Effects</a>
+    <a href="Consulting.html">Consulting</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="m-cta">Book Free Counseling →</a>
+  </nav>
+
+  <!-- Search Overlay -->
+  <div class="search-ol" id="search-overlay">
+    <div class="search-wrap">
+      <div class="search-bar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="search-input" placeholder="Search programs — Full Stack, AI, VFX…" autocomplete="off">
+        <button class="search-esc" id="search-close">Esc</button>
       </div>
-      <div class="search-results" id="search-results"></div>
+      <div class="search-res" id="search-results"></div>
     </div>
   </div>
 
-  <!-- ====================================================
-       MAIN PAGE CONTENT
-       ==================================================== -->
-  <main id="main-content">
-    
-      <!-- HERO -->
-      <section class="hero">
-        <div class="hero-bg">
-          <img src="assets/images/hero/hero-main.jpg" alt="Qaroo Tech Academy" fetchpriority="high">
-        </div>
-        <div class="container">
-          <div class="hero-content">
-            <p class="hero-eyebrow">Established 2018 &nbsp;·&nbsp; ISO 9001:2015 Certified</p>
-            <h1>Educating the Next Generation of <em>Technical Leaders</em></h1>
-            <p class="hero-subtitle">Qaroo India blends industry-grade training with active software consulting — building engineers who are production-ready from day one.</p>
-            <div class="hero-actions">
-              <a href="contact.html" class="btn btn-primary" id="hero-cta-primary">Book Free Counseling</a>
-              <a href="#programs" class="btn btn-white" id="hero-cta-secondary">Explore Programs</a>
-            </div>
+  <!-- Main -->
+  <main>
+    <!-- ── Hero ── -->
+    <section class="hero">
+      <div class="hero-line"></div>
+      <div class="hero-body">
+        <div class="hero-kicker">Coimbatore · Chennai · Since 2018</div>
+        <h1 class="hero-manifesto" aria-label="We Build Engineers. Not Just Students.">
+          <span class="line"><span class="word">WE&nbsp;BUILD</span></span>
+          <span class="line"><span class="word outline">ENGINEERS,</span></span>
+          <span class="line"><span class="word">NOT&nbsp;JUST</span></span>
+          <span class="line"><span class="word red-word">STUDENTS.</span></span>
+        </h1>
+        <div class="hero-strip">
+          <p class="hero-desc">Qaroo India is a technology academy and engineering consultancy that produces job-ready engineers through production-grade training, live project labs, and industry mentorship.</p>
+          <div class="hero-actions">
+            <a href="contact.html" class="btn-primary-red">Free Counseling <span>→</span></a>
+            <a href="#programs" class="btn-ghost-white">View Programs</a>
           </div>
         </div>
-        <div class="hero-scroll">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          Scroll
-        </div>
-      </section>
-
-      <!-- STATS BAR -->
-      <section class="stats-bar">
-        <div class="container">
-          <div class="grid-4">
-            <div class="stat-item reveal">
-              <div class="stat-number" data-count="10000" data-suffix="+">10,000+</div>
-              <div class="stat-label">Students Trained</div>
-            </div>
-            <div class="stat-item reveal delay-1">
-              <div class="stat-number" data-count="100" data-suffix="+">100+</div>
-              <div class="stat-label">Placement Partners</div>
-            </div>
-            <div class="stat-item reveal delay-2">
-              <div class="stat-number" data-count="17" data-suffix="+">17+</div>
-              <div class="stat-label">Certified Programs</div>
-            </div>
-            <div class="stat-item reveal delay-3">
-              <div class="stat-number" data-count="100" data-suffix="%">100%</div>
-              <div class="stat-label">Placement Support</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ABOUT SECTION -->
-      <section class="section">
-        <div class="container">
-          <div class="grid-2">
-            <div class="about-image-wrap reveal-left">
-              <div class="about-image-main">
-                <img src="assets/images/about/about-main.jpg" alt="Qaroo Training Lab">
-              </div>
-              <div class="about-badge">
-                <div class="number">8+</div>
-                <div class="label">Years of Excellence</div>
-              </div>
-            </div>
-            <div class="about-text reveal-right">
-              <span class="section-eyebrow">About Qaroo India</span>
-              <h2 class="section-title">Coimbatore's Leading IT Training Academy</h2>
-              <p style="color:var(--text-body);font-size:16px;line-height:1.75;margin-bottom:20px;">Founded to address the industry-academia skills gap, Qaroo India delivers high-fidelity learning labs and software deployment solutions. Our coursework is authored by senior engineers with modules that mirror real production systems.</p>
-              <ul class="about-list">
-                <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Industry mentors with 10+ years corporate experience</li>
-                <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Live project labs — not just theory</li>
-                <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Dedicated placement cell with 100+ partner companies</li>
-                <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Branches in Coimbatore & Chennai</li>
-              </ul>
-              <div style="display:flex;gap:16px;flex-wrap:wrap;">
-                <a href="about.html" class="btn btn-primary">Our Story</a>
-                <a href="Consulting.html" class="btn btn-secondary">Consulting Services</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PROGRAMS GRID -->
-      <section class="section section--grey" id="programs">
-        <div class="container">
-          <div class="text-center reveal" style="margin-bottom:56px;">
-            <span class="section-eyebrow">Our Curriculum</span>
-            <h2 class="section-title">Certified Professional Programs</h2>
-            <p class="section-subtitle" style="margin:0 auto;">Industry-aligned courses designed by senior engineers. Hands-on labs, live projects, and placement support included.</p>
-          </div>
-          <div class="courses-grid">
-            
-    <div class="course-card reveal">
-      <div class="course-card-image">
-        <img src="assets/images/courses/full_stack.jpg" alt="Full Stack Development" loading="lazy">
-        <span class="course-badge">Engineering</span>
       </div>
-      <div class="course-card-body">
-        <p class="course-tag">Engineering</p>
-        <h3 class="course-card-title">Full Stack Development</h3>
-        <p class="course-card-desc">Master industry-grade skills with hands-on training and live project experience.…</p>
-        <div class="course-card-footer">
-          <span class="course-meta"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 120 Hrs</span>
-          <span class="course-price">Rs. 35,000</span>
+    </section>
+
+    <!-- ── Ticker ── -->
+    <div class="ticker">
+      <div class="ticker-track"><span class="ticker-item"><span class="ticker-dot"></span>Full Stack Development</span><span class="ticker-item"><span class="ticker-dot"></span>Python Engineering</span><span class="ticker-item"><span class="ticker-dot"></span>Artificial Intelligence</span><span class="ticker-item"><span class="ticker-dot"></span>Data Science</span><span class="ticker-item"><span class="ticker-dot"></span>UI / UX Design</span><span class="ticker-item"><span class="ticker-dot"></span>Cyber Security</span><span class="ticker-item"><span class="ticker-dot"></span>Visual Effects</span><span class="ticker-item"><span class="ticker-dot"></span>Software Testing</span><span class="ticker-item"><span class="ticker-dot"></span>Machine Learning</span><span class="ticker-item"><span class="ticker-dot"></span>2D Animation</span><span class="ticker-item"><span class="ticker-dot"></span>Ethical Hacking</span><span class="ticker-item"><span class="ticker-dot"></span>Digital Marketing</span><span class="ticker-item"><span class="ticker-dot"></span>Full Stack Development</span><span class="ticker-item"><span class="ticker-dot"></span>Python Engineering</span><span class="ticker-item"><span class="ticker-dot"></span>Artificial Intelligence</span><span class="ticker-item"><span class="ticker-dot"></span>Data Science</span><span class="ticker-item"><span class="ticker-dot"></span>UI / UX Design</span><span class="ticker-item"><span class="ticker-dot"></span>Cyber Security</span><span class="ticker-item"><span class="ticker-dot"></span>Visual Effects</span><span class="ticker-item"><span class="ticker-dot"></span>Software Testing</span><span class="ticker-item"><span class="ticker-dot"></span>Machine Learning</span><span class="ticker-item"><span class="ticker-dot"></span>2D Animation</span><span class="ticker-item"><span class="ticker-dot"></span>Ethical Hacking</span><span class="ticker-item"><span class="ticker-dot"></span>Digital Marketing</span></div>
+    </div>
+
+    <!-- ── Split Stats ── -->
+    <div class="split-stats">
+      <div class="split-half">
+        <div class="split-stat-num rv" data-count="10000" data-suffix="+">10,000+</div>
+        <div class="split-stat-label rv d1">Graduates Placed</div>
+        <p class="split-stat-sub rv d2">Engineers now working at TCS, Infosys, Zoho, Wipro, HCL, Freshworks, and 100+ other companies.</p>
+      </div>
+      <div class="split-half">
+        <div class="stats-4">
+          <div class="stat-cell">
+            <div class="stat-num rv" data-count="17" data-suffix="+">17+</div>
+            <div class="stat-lbl rv d1">Certified Programs</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num rv" data-count="100" data-suffix="+">100+</div>
+            <div class="stat-lbl rv d1">Hiring Partners</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num rv" data-count="8">8</div>
+            <div class="stat-lbl rv d1">Years Running</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num rv">ISO</div>
+            <div class="stat-lbl rv d1">9001:2015 Certified</div>
+          </div>
         </div>
-        <a href="full_stack.html" class="course-card-link" style="margin-top:14px;display:inline-flex;">
-          View Program <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
       </div>
     </div>
-    <div class="course-card reveal">
-      <div class="course-card-image">
-        <img src="assets/images/courses/python.jpg" alt="Python Development" loading="lazy">
-        <span class="course-badge">Development</span>
+
+    <!-- ── Course Lineup ── -->
+    <section class="lineup" id="programs">
+      <div class="lineup-header">
+        <h2 class="lineup-title rv">Program Catalog</h2>
+        <span class="lineup-meta rv">12 programs · 2026 cohort</span>
       </div>
-      <div class="course-card-body">
-        <p class="course-tag">Development</p>
-        <h3 class="course-card-title">Python Development</h3>
-        <p class="course-card-desc">Master industry-grade skills with hands-on training and live project experience.…</p>
-        <div class="course-card-footer">
-          <span class="course-meta"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 100 Hrs</span>
-          <span class="course-price">Rs. 32,000</span>
+      <div class="lineup-filters">
+        <button class="lf on" data-cat="all">All Programs</button>
+        <button class="lf" data-cat="engineering">Engineering</button>
+        <button class="lf" data-cat="data">Data & AI</button>
+        <button class="lf" data-cat="creative">Creative & VFX</button>
+        <button class="lf" data-cat="security">Security & QA</button>
+      </div>
+      
+    <a href="full_stack.html" class="course-row" data-cat="engineering">
+      <div class="course-row-img"><img src="assets/images/courses/full_stack.jpg" alt="Full Stack Development" loading="lazy"></div>
+      <span class="row-num">01</span>
+      <span class="row-name">
+        Full Stack Development
+        <span class="row-cat-pill">Engineering</span>
+      </span>
+      <span class="row-dur">120h</span>
+      <span class="row-price">₹35,000 <span class="row-arrow">→</span></span>
+    </a>
+    <a href="python_development.html" class="course-row" data-cat="engineering">
+      <div class="course-row-img"><img src="assets/images/courses/python.jpg" alt="Python Development" loading="lazy"></div>
+      <span class="row-num">02</span>
+      <span class="row-name">
+        Python Development
+        <span class="row-cat-pill">Engineering</span>
+      </span>
+      <span class="row-dur">100h</span>
+      <span class="row-price">₹32,000 <span class="row-arrow">→</span></span>
+    </a>
+    <a href="data_science.html" class="course-row" data-cat="data">
+      <div class="course-row-img"><img src="assets/images/courses/data_science.jpg" alt="Data Science & Analytics" loading="lazy"></div>
+      <span class="row-num">03</span>
+      <span class="row-name">
+        Data Science & Analytics
+        <span class="row-cat-pill">Data & AI</span>
+      </span>
+      <span class="row-dur">140h</span>
+      <span class="row-price">₹40,000 <span class="row-arrow">→</span></span>
+    </a>
+    <a href="ai_intelligence.html" class="course-row" data-cat="data">
+      <div class="course-row-img"><img src="assets/images/courses/ai.jpg" alt="Artificial Intelligence" loading="lazy"></div>
+      <span class="row-num">04</span>
+      <span class="row-name">
+        Artificial Intelligence
+        <span class="row-cat-pill">Data & AI</span>
+      </span>
+      <span class="row-dur">120h</span>
+      <span class="row-price">₹45,000 <span class="row-arrow">→</span></span>
+    </a>
+    <a href="machine_learning.html" class="course-row" data-cat="data">
+      <div class="course-row-img"><img src="assets/images/courses/ai.jpg" alt="Machine Learning" loading="lazy"></div>
+      <span class="row-num">05</span>
+      <span class="row-name">
+        Machine Learning
+        <span class="row-cat-pill">Data & AI</span>
+      </span>
+      <span class="row-dur">120h</span>
+      <span class="row-price">₹45,000 <span class="row-arrow">→</span></span>
+    </a>
+    <a href="ui_ux.html" class="course-row" data-cat="creative">
+      <div class="course-row-img"><img src="assets/images/courses/ui_ux.jpg" alt="UI / UX Design" loading="lazy"></div>
+      <span class="row-num">06</span>
+      <span class="row-name">
+        UI / UX Design
+        <span class="row-cat-pill">Creative & VFX</span>
+      </span>
+      <span class="row-dur">90h</span>
+      <span class="row-price">₹30,000 <span class="row-arrow">→</span></span>
+    </a>
+    <a href="software_testing.html" class="course-row" data-cat="security">
+      <div class="course-row-img"><img src="assets/images/courses/full_stack.jpg" alt="Software Testing" loading="lazy"></div>
+      <span class="row-num">07</span>
+      <span class="row-name">
+        Software Testing
+        <span class="row-cat-pill">Security & QA</span>
+      </span>
+      <span class="row-dur">100h</span>
+      <span class="row-price">₹28,000 <span class="row-arrow">→</span></span>
+    </a>
+    <a href="cyber_security.html" class="course-row" data-cat="security">
+      <div class="course-row-img"><img src="assets/images/qaroo_creatives/Cyber-Security.jpg" alt="Cyber Security" loading="lazy"></div>
+      <span class="row-num">08</span>
+      <span class="row-name">
+        Cyber Security
+        <span class="row-cat-pill">Security & QA</span>
+      </span>
+      <span class="row-dur">100h</span>
+      <span class="row-price">₹38,000 <span class="row-arrow">→</span></span>
+    </a>
+    <a href="visual_effects.html" class="course-row" data-cat="creative">
+      <div class="course-row-img"><img src="assets/images/courses/animation.jpg" alt="Visual Effects (VFX)" loading="lazy"></div>
+      <span class="row-num">09</span>
+      <span class="row-name">
+        Visual Effects (VFX)
+        <span class="row-cat-pill">Creative & VFX</span>
+      </span>
+      <span class="row-dur">120h</span>
+      <span class="row-price">₹32,000 <span class="row-arrow">→</span></span>
+    </a>
+    <a href="2d_animation.html" class="course-row" data-cat="creative">
+      <div class="course-row-img"><img src="assets/images/courses/animation.jpg" alt="2D Animation" loading="lazy"></div>
+      <span class="row-num">10</span>
+      <span class="row-name">
+        2D Animation
+        <span class="row-cat-pill">Creative & VFX</span>
+      </span>
+      <span class="row-dur">100h</span>
+      <span class="row-price">₹30,000 <span class="row-arrow">→</span></span>
+    </a>
+    <a href="ethical_hacking.html" class="course-row" data-cat="security">
+      <div class="course-row-img"><img src="assets/images/qaroo_creatives/ethicalhacking.jpg" alt="Ethical Hacking" loading="lazy"></div>
+      <span class="row-num">11</span>
+      <span class="row-name">
+        Ethical Hacking
+        <span class="row-cat-pill">Security & QA</span>
+      </span>
+      <span class="row-dur">100h</span>
+      <span class="row-price">₹38,000 <span class="row-arrow">→</span></span>
+    </a>
+    <a href="digital_marketing.html" class="course-row" data-cat="creative">
+      <div class="course-row-img"><img src="assets/images/qaroo_creatives/digital-market.jpg" alt="Digital Marketing" loading="lazy"></div>
+      <span class="row-num">12</span>
+      <span class="row-name">
+        Digital Marketing
+        <span class="row-cat-pill">Creative & VFX</span>
+      </span>
+      <span class="row-dur">80h</span>
+      <span class="row-price">₹28,000 <span class="row-arrow">→</span></span>
+    </a>
+    </section>
+
+    <!-- ── Company Ticker ── -->
+    <div class="co-strip">
+      <p class="co-label">Graduates working at</p>
+      <div class="co-track"><span class="co-item">TCS</span><span class="co-item">Infosys</span><span class="co-item">Zoho</span><span class="co-item">Wipro</span><span class="co-item">HCL</span><span class="co-item">Capgemini</span><span class="co-item">Tech Mahindra</span><span class="co-item">L&T Infotech</span><span class="co-item">Hexaware</span><span class="co-item">Freshworks</span><span class="co-item">Paypal</span><span class="co-item">Cognizant</span><span class="co-item">Accenture</span><span class="co-item">IBM</span><span class="co-item">TCS</span><span class="co-item">Infosys</span><span class="co-item">Zoho</span><span class="co-item">Wipro</span><span class="co-item">HCL</span><span class="co-item">Capgemini</span><span class="co-item">Tech Mahindra</span><span class="co-item">L&T Infotech</span><span class="co-item">Hexaware</span><span class="co-item">Freshworks</span><span class="co-item">Paypal</span><span class="co-item">Cognizant</span><span class="co-item">Accenture</span><span class="co-item">IBM</span></div>
+    </div>
+
+    <!-- ── About Split ── -->
+    <div class="about-split">
+      <div class="about-left">
+        <img src="assets/images/about/about-main.jpg" alt="Qaroo Training Lab" class="about-left-img">
+        <span class="about-left-badge">Live Project Labs</span>
+      </div>
+      <div class="about-right">
+        <div class="about-overline rv">Who We Are</div>
+        <h2 class="about-h rv d1">Built Different,<br>By Design.</h2>
+        <p class="about-p rv d2">Unlike institutions that teach theory, Qaroo candidates write production code, configure CI/CD pipelines, and present final projects for live code review by senior engineers on day one of their career.<br><br>We operate both as a training academy and an active software consultancy — giving our students real-world exposure to client-grade engineering problems.</p>
+        <div class="about-pills rv d3">
+          <span class="a-pill">ISO 9001:2015</span>
+          <span class="a-pill">100% Placement Support</span>
+          <span class="a-pill">Live Code Reviews</span>
+          <span class="a-pill">Industry Mentors</span>
         </div>
-        <a href="python_development.html" class="course-card-link" style="margin-top:14px;display:inline-flex;">
-          View Program <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
+        <a href="about.html" class="btn-link-red rv d4">Read Our Story →</a>
       </div>
     </div>
-    <div class="course-card reveal">
-      <div class="course-card-image">
-        <img src="assets/images/courses/data_science.jpg" alt="Data Science" loading="lazy">
-        <span class="course-badge">Data & AI</span>
-      </div>
-      <div class="course-card-body">
-        <p class="course-tag">Data & AI</p>
-        <h3 class="course-card-title">Data Science</h3>
-        <p class="course-card-desc">Master industry-grade skills with hands-on training and live project experience.…</p>
-        <div class="course-card-footer">
-          <span class="course-meta"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 140 Hrs</span>
-          <span class="course-price">Rs. 40,000</span>
-        </div>
-        <a href="data_science.html" class="course-card-link" style="margin-top:14px;display:inline-flex;">
-          View Program <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
-    </div>
-    <div class="course-card reveal">
-      <div class="course-card-image">
-        <img src="assets/images/courses/ui_ux.jpg" alt="UI / UX Design" loading="lazy">
-        <span class="course-badge">Creative</span>
-      </div>
-      <div class="course-card-body">
-        <p class="course-tag">Creative</p>
-        <h3 class="course-card-title">UI / UX Design</h3>
-        <p class="course-card-desc">Author premium, interactive user journeys used by global product companies. Master user research, wireframing,…</p>
-        <div class="course-card-footer">
-          <span class="course-meta"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 90 Hrs</span>
-          <span class="course-price">Rs. 30,000</span>
-        </div>
-        <a href="ui_ux.html" class="course-card-link" style="margin-top:14px;display:inline-flex;">
-          View Program <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
-    </div>
-    <div class="course-card reveal">
-      <div class="course-card-image">
-        <img src="assets/images/courses/ai.jpg" alt="Artificial Intelligence" loading="lazy">
-        <span class="course-badge">Data & AI</span>
-      </div>
-      <div class="course-card-body">
-        <p class="course-tag">Data & AI</p>
-        <h3 class="course-card-title">Artificial Intelligence</h3>
-        <p class="course-card-desc">Our Artificial Intelligence training program is designed to transform developers into AI specialists capable o…</p>
-        <div class="course-card-footer">
-          <span class="course-meta"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 120 Hrs</span>
-          <span class="course-price">Rs. 45,000</span>
-        </div>
-        <a href="ai_intelligence.html" class="course-card-link" style="margin-top:14px;display:inline-flex;">
-          View Program <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
-    </div>
-    <div class="course-card reveal">
-      <div class="course-card-image">
-        <img src="assets/images/courses/animation.jpg" alt="2D Animation" loading="lazy">
-        <span class="course-badge">Animation</span>
-      </div>
-      <div class="course-card-body">
-        <p class="course-tag">Animation</p>
-        <h3 class="course-card-title">2D Animation</h3>
-        <p class="course-card-desc">Build creative cartoon designs and commercial-grade animations. Learn keyframing, timeline mechanics, physics …</p>
-        <div class="course-card-footer">
-          <span class="course-meta"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 100 Hrs</span>
-          <span class="course-price">Rs. 30,000</span>
-        </div>
-        <a href="2d_animation.html" class="course-card-link" style="margin-top:14px;display:inline-flex;">
-          View Program <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
-    </div>
-          </div>
-          <div class="view-all-wrap">
-            <a href="contact.html" class="btn btn-primary">View All 17 Programs</a>
-          </div>
-        </div>
-      </section>
 
-      <!-- WHY CHOOSE US -->
-      <section class="section">
-        <div class="container">
-          <div class="text-center reveal" style="margin-bottom:56px;">
-            <span class="section-eyebrow">Why Qaroo</span>
-            <h2 class="section-title">The Qaroo Difference</h2>
-          </div>
-          <div class="grid-3">
-            <div class="feature-card reveal delay-1">
-              <div class="feature-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-              </div>
-              <h3 class="feature-title">Industry Mentors</h3>
-              <p class="feature-desc">Every trainer is a practising senior engineer with 10+ years of corporate experience — no theoretical-only instructors.</p>
-            </div>
-            <div class="feature-card reveal delay-2">
-              <div class="feature-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-              </div>
-              <h3 class="feature-title">Live Project Labs</h3>
-              <p class="feature-desc">Our labs run 24/7. Every student builds and deploys real systems — not toy examples. Your portfolio grows with every module.</p>
-            </div>
-            <div class="feature-card reveal delay-3">
-              <div class="feature-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              </div>
-              <h3 class="feature-title">Placement Cell</h3>
-              <p class="feature-desc">Dedicated placement support with 100+ partner companies — resume reviews, mock interviews, and direct referrals to top firms.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PRICING -->
-      <section class="section section--grey">
-        <div class="container">
-          <div class="text-center reveal" style="margin-bottom:56px;">
-            <span class="section-eyebrow">Transparent Tuition</span>
-            <h2 class="section-title">Choose Your Learning Plan</h2>
-          </div>
-          <div class="pricing-grid">
-            <div class="pricing-card reveal delay-1">
-              <p class="plan-name">Foundation</p>
-              <p class="plan-desc">Perfect for beginners learning core fundamentals.</p>
-              <div class="plan-price"><span class="currency">₹</span><span class="amount">15,000</span><span class="period">/ course</span></div>
-              <ul class="plan-features">
-                <li class="plan-feature"><span class="plan-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Core Curriculum Access</li>
-                <li class="plan-feature"><span class="plan-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Lab Access (Business Hours)</li>
-                <li class="plan-feature"><span class="plan-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>QAROO Certificate</li>
-              </ul>
-              <a href="contact.html" class="btn btn-secondary" style="width:100%">Get Started</a>
-            </div>
-            <div class="pricing-card featured reveal delay-2">
-              <span class="plan-badge">Most Popular</span>
-              <p class="plan-name">Professional</p>
-              <p class="plan-desc">For candidates targeting top corporate careers.</p>
-              <div class="plan-price"><span class="currency">₹</span><span class="amount">35,000</span><span class="period">/ course</span></div>
-              <ul class="plan-features">
-                <li class="plan-feature"><span class="plan-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Full Production Syllabus</li>
-                <li class="plan-feature"><span class="plan-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>1-on-1 Mentoring Sessions</li>
-                <li class="plan-feature"><span class="plan-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Internship Placement</li>
-                <li class="plan-feature"><span class="plan-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Resume & Portfolio Review</li>
-              </ul>
-              <a href="contact.html" class="btn btn-primary" style="width:100%">Enroll Now</a>
-            </div>
-            <div class="pricing-card reveal delay-3">
-              <p class="plan-name">Elite</p>
-              <p class="plan-desc">Bespoke corporate consulting track preparation.</p>
-              <div class="plan-price"><span class="currency">₹</span><span class="amount">75,000</span><span class="period">/ custom</span></div>
-              <ul class="plan-features">
-                <li class="plan-feature"><span class="plan-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Bespoke Architecture Prep</li>
-                <li class="plan-feature"><span class="plan-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Mock Architectural Interviews</li>
-                <li class="plan-feature"><span class="plan-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Executive Network Referrals</li>
-              </ul>
-              <a href="contact.html" class="btn btn-secondary" style="width:100%">Contact Us</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- TESTIMONIAL -->
-      <section class="section">
-        <div class="container">
-          <div class="text-center reveal" style="margin-bottom:48px;">
-            <span class="section-eyebrow">Student Success</span>
-            <h2 class="section-title">What Our Alumni Say</h2>
-          </div>
-          <div class="testimonial-slider reveal">
-            <div class="testimonial-card">
-              <div class="testimonial-stars">★★★★★</div>
-              <p class="testimonial-text">"The curriculum at Qaroo is production-grade. The mentors don't just teach code — they teach software design principles, testing protocols, and robust system architecture. I secured my engineering role within weeks of completing the bootcamp."</p>
-              <div class="testimonial-author">
-                <div class="testimonial-avatar">
-                  <img src="assets/images/qaroo_creatives/review-2-1.jpg" alt="Alumni" onerror="this.style.display='none'">
-                </div>
-                <div>
-                  <p class="author-name">Vignesh Hariprasad</p>
-                  <p class="author-role">Senior Associate Engineer, Cognizant</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PLACEMENT PARTNERS -->
-      <section class="section section--grey">
-        <div class="container">
-          <div class="text-center reveal" style="margin-bottom:48px;">
-            <span class="section-eyebrow">Placement Partners</span>
-            <h2 class="section-title">Our Graduates Work At</h2>
-          </div>
-          <div class="partners-wrap reveal">
-            <img src="assets/images/partners/partner_tcs.svg" alt="TCS" class="partner-logo">
-            <img src="assets/images/partners/partner_infosys.svg" alt="Infosys" class="partner-logo">
-            <img src="assets/images/partners/partner_wipro.svg" alt="Wipro" class="partner-logo">
-            <img src="assets/images/partners/partner_cognizant.svg" alt="Cognizant" class="partner-logo">
-            <img src="assets/images/partners/partner_accenture.svg" alt="Accenture" class="partner-logo">
-            <img src="assets/images/partners/partner_google.svg" alt="Google" class="partner-logo">
-            <img src="assets/images/partners/partner_amazon.svg" alt="Amazon" class="partner-logo">
-            <img src="assets/images/partners/partner_microsoft.svg" alt="Microsoft" class="partner-logo">
-            <img src="assets/images/partners/partner_ibm.svg" alt="IBM" class="partner-logo">
-          </div>
-        </div>
-      </section>
-
-      <!-- CTA BANNER -->
-      <section class="cta-banner">
-        <div class="container">
-          <span class="section-eyebrow" style="color:rgba(255,255,255,0.7)">Start Today</span>
-          <h2>Ready to Launch Your Tech Career?</h2>
-          <p>Book a free career counseling session with our academic advisors. No commitment required.</p>
-          <a href="contact.html" class="btn btn-white" id="cta-banner-btn">Book Free Session</a>
-        </div>
-      </section>
-    
-  </main>
-
-  <!-- ====================================================
-       FOOTER
-       ==================================================== -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <!-- Brand -->
+    <!-- ── Team ── -->
+    <section class="team-section">
+      <div class="section-header">
         <div>
-          <div class="footer-logo">
-            <img src="assets/branding/logos/logo-two.png" alt="Qaroo India">
-          </div>
-          <p class="footer-bio">Qaroo India Private Limited — Coimbatore & Chennai's premier technology training academy and software consultancy. Producing job-ready engineers since 2018.</p>
-          <div class="footer-socials">
-            <a href="#" class="social-btn" aria-label="Facebook">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            </a>
-            <a href="#" class="social-btn" aria-label="LinkedIn">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
-            <a href="#" class="social-btn" aria-label="Instagram">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            </a>
-            <a href="#" class="social-btn" aria-label="YouTube">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.95C18.88 4 12 4 12 4s-6.88 0-8.59.47a2.78 2.78 0 0 0-1.95 1.95A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.5C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
-            </a>
+          <p class="s-overline rv">Academic Leadership</p>
+          <h2 class="s-title rv d1">Trained by Engineers,<br>Not Professors.</h2>
+        </div>
+      </div>
+      <div class="team-grid">
+        
+    <div class="team-card rv">
+      <div class="tc-img"><img src="assets/images/team/team-rajesh.jpg" alt="Dr. Rajesh Kumar" loading="lazy"></div>
+      <div class="tc-body">
+        <div class="tc-name">Dr. Rajesh Kumar</div>
+        <div class="tc-role">Chief Academic Officer</div>
+        <p class="tc-bio">"Our curriculum is engineered like enterprise software — reviewed quarterly."</p>
+        <div class="tc-tags"><span class="tc-tag">Ex-Microsoft</span><span class="tc-tag">Ph.D. CS</span><span class="tc-tag">15 Yrs</span></div>
+      </div>
+    </div>
+        
+    <div class="team-card rv">
+      <div class="tc-img"><img src="assets/images/team/team-ananya.jpg" alt="Ananya Sharma" loading="lazy"></div>
+      <div class="tc-body">
+        <div class="tc-name">Ananya Sharma</div>
+        <div class="tc-role">Head · AI & Data Science</div>
+        <p class="tc-bio">"Students train on real production clusters, not toy Kaggle datasets."</p>
+        <div class="tc-tags"><span class="tc-tag">Ex-Amazon</span><span class="tc-tag">IIT Madras</span><span class="tc-tag">AI/ML</span></div>
+      </div>
+    </div>
+        
+    <div class="team-card rv">
+      <div class="tc-img"><img src="assets/images/team/team-karthik.jpg" alt="Karthik Sundaram" loading="lazy"></div>
+      <div class="tc-body">
+        <div class="tc-name">Karthik Sundaram</div>
+        <div class="tc-role">Full-Stack Director</div>
+        <p class="tc-bio">"Code reviews follow the same standards as top-tier product companies."</p>
+        <div class="tc-tags"><span class="tc-tag">Ex-Zoho</span><span class="tc-tag">Architect</span><span class="tc-tag">12 Yrs</span></div>
+      </div>
+    </div>
+        
+    <div class="team-card rv">
+      <div class="tc-img"><img src="assets/images/team/team-priya.jpg" alt="Priya Venkatesh" loading="lazy"></div>
+      <div class="tc-body">
+        <div class="tc-name">Priya Venkatesh</div>
+        <div class="tc-role">Lead · UI/UX & Media</div>
+        <p class="tc-bio">"Design at Qaroo bridges visual artistry and production implementation."</p>
+        <div class="tc-tags"><span class="tc-tag">Figma Master</span><span class="tc-tag">10 Yrs</span><span class="tc-tag">Design Lead</span></div>
+      </div>
+    </div>
+      </div>
+    </section>
+
+    <!-- ── Testimonials ── -->
+    <section class="testi-section">
+      <div class="section-header">
+        <div>
+          <p class="s-overline rv">Graduate Stories</p>
+          <h2 class="s-title rv d1">What Our Alumni Say</h2>
+        </div>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card rv d1">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">My mentor was an actual ex-Microsoft architect who reviewed every line of code I wrote. I landed at TCS Digital within 3 weeks of graduating. Qaroo is a different league.</p>
+          <div class="testi-author">
+            <div class="t-av">AK</div>
+            <div><div class="t-name">Arjun Krishnamurthy</div><div class="t-role">Software Engineer</div></div>
+            <span class="t-co">TCS Digital</span>
           </div>
         </div>
-
-        <!-- Programs -->
-        <div class="footer-col">
-          <h5>Programs</h5>
-          <ul class="footer-links">
-            <li><a href="full_stack.html">Full Stack Dev</a></li>
-            <li><a href="python_development.html">Python Development</a></li>
-            <li><a href="data_science.html">Data Science</a></li>
-            <li><a href="ai_intelligence.html">Artificial Intelligence</a></li>
-            <li><a href="machine_learning.html">Machine Learning</a></li>
-            <li><a href="ui_ux.html">UI / UX Design</a></li>
-            <li><a href="software_testing.html">Software Testing</a></li>
-          </ul>
-        </div>
-
-        <!-- Company -->
-        <div class="footer-col">
-          <h5>Company</h5>
-          <ul class="footer-links">
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="Consulting.html">Consulting</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="contact.html">Careers</a></li>
-            <li><a href="contact.html">Placement Partners</a></li>
-          </ul>
-        </div>
-
-        <!-- Newsletter -->
-        <div class="footer-col">
-          <h5>Stay Updated</h5>
-          <p style="font-size:14px;color:rgba(255,255,255,0.5);margin-bottom:16px;line-height:1.6;">Get career guides, course updates, and placement news in your inbox.</p>
-          <div class="footer-newsletter">
-            <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
-            <button class="btn btn-primary" style="width:100%">Subscribe</button>
+        <div class="testi-card rv d2">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">The Data Science course is built like a real production data pipeline — not a YouTube tutorial series. The live BigQuery labs gave me the confidence to crack my Amazon interview.</p>
+          <div class="testi-author">
+            <div class="t-av">SM</div>
+            <div><div class="t-name">Sneha Murugan</div><div class="t-role">Data Analyst</div></div>
+            <span class="t-co">Amazon</span>
           </div>
+        </div>
+        <div class="testi-card rv d3">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">Working directly with a design lead who has 10 years of product experience was invaluable. My Figma portfolio landed me an offer at a Bengaluru product startup within weeks.</p>
+          <div class="testi-author">
+            <div class="t-av">RV</div>
+            <div><div class="t-name">Rahul Venkatesh</div><div class="t-role">UX Designer</div></div>
+            <span class="t-co">Freshworks</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <div class="cta-full">
+      <h2 class="cta-big rv">Start Building<br><span class="red">Your Career.</span></h2>
+      <p class="cta-sub rv d1">Book a free 30-minute counseling session. No obligations. Just clarity on the right program for your goals.</p>
+      <div class="cta-actions rv d2">
+        <a href="contact.html" class="btn-primary-red">Book Free Session →</a>
+        <a href="#programs" class="btn-ghost-white">Browse Programs</a>
+      </div>
+    </div></main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <img src="assets/branding/logos/logo-two.png" alt="Qaroo India" class="f-logo">
+        <p class="f-bio">Qaroo India Private Limited — Coimbatore &amp; Chennai's premier technology training academy and engineering consultancy. Producing job-ready engineers since 2018.</p>
+        <div class="f-socials">
+          <a href="#" class="f-soc" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="f-soc" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="f-soc" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="f-soc" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div>
+        <p class="f-col-h">Company</p>
+        <ul class="f-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="Consulting.html">Consulting</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="f-col-h">Programs</p>
+        <ul class="f-links">
+          <li><a href="full_stack.html">Full Stack Dev</a></li>
+          <li><a href="python_development.html">Python</a></li>
+          <li><a href="data_science.html">Data Science</a></li>
+          <li><a href="ai_intelligence.html">AI &amp; ML</a></li>
+          <li><a href="ui_ux.html">UI / UX</a></li>
+          <li><a href="visual_effects.html">Visual Effects</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="f-col-h">Stay Updated</p>
+        <p style="font-size:12.5px;color:rgba(255,255,255,0.3);line-height:1.6;margin-bottom:14px;">Career news, placement updates, and free learning resources.</p>
+        <div class="f-nl-input">
+          <input type="email" placeholder="your@email.com" aria-label="Email">
+          <button class="f-nl-btn">→</button>
         </div>
       </div>
     </div>
-
     <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; 2026 Qaroo India Private Limited. All Rights Reserved. Coimbatore &amp; Chennai.</p>
-      </div>
+      <p class="f-bottom-text">© 2026 Qaroo India Private Limited. All Rights Reserved.</p>
+      <p class="f-bottom-text">Coimbatore · Chennai</p>
     </div>
   </footer>
 
-  <!-- Search Index (injected by build script) -->
-  <script>window.QAROO_COURSES = [{"title":"2D Animation","desc":"Build creative cartoon designs and commercial-grade animations. Learn keyframing, timeline mechanics, physics weight, lip sync, scene layout creation, and advanced rigging for professional animation pipelines.","url":"2d_animation.html","category":"Animation"},{"title":"3D Animation","desc":"Master the complete 3D production pipeline — from 3D modeling and rigging to shading, lighting, rendering, and compositing. Work with industry tools like Maya, Blender, and Arnold Renderer.","url":"3d_animation.html","category":"Animation"},{"title":"Artificial Intelligence","desc":"Our Artificial Intelligence training program is designed to transform developers into AI specialists capable of building neural networks, natural language processing systems, and computer vision applications used in real production environments.","url":"ai_intelligence.html","category":"Data & AI"},{"title":"Business Analytics","desc":"A data analyst collects, cleans, interprets, and visualizes data to uncover trends and patterns, ultimately providing actionable insights that help organizations make informed, data-driven decisions.","url":"business_analytics.html","category":"Data & AI"},{"title":"Cyber Security","desc":"Gain the expertise to protect digital infrastructure. Learn network security, threat intelligence, vulnerability assessment, penetration testing fundamentals, and industry-standard security protocols for corporate IT environments.","url":"cyber_security.html","category":"Security"},{"title":"Data Science","desc":"Data Science is a rapidly growing field due to the increasing availability of data. With the advent of big data, organizations can now collect vast amounts of data from various sources. This data can be used to improve decision-making in all business areas, from marketing to product development.","url":"data_science.html","category":"Data & AI"},{"title":"Digital Marketing","desc":"Master the full digital marketing ecosystem. Learn SEO, SEM, Google Ads, Meta advertising, email marketing, content strategy, analytics tracking, and campaign management for real brand growth.","url":"digital_marketing.html","category":"Marketing"},{"title":"Ethical Hacking","desc":"Learn the art of thinking like an attacker to defend systems better. Covers web application testing, network penetration, wireless security, social engineering, and ethical hacking methodology aligned to CEH standards.","url":"ethical_hacking.html","category":"Security"},{"title":"Full Stack Development","desc":"Full stack developers are in high demand because they can wear many hats. They can often take on multiple roles within a team, making them valuable assets to any organization.","url":"full_stack.html","category":"Engineering"},{"title":"Full Stack Java","desc":"Full stack developers are in high demand because they can wear many hats. They can often take on multiple roles within a team, making them valuable assets to any organization.","url":"full_stack_java.html","category":"Engineering"},{"title":"Graphic Designing","desc":"Develop your creative visual identity skills. Master Adobe Photoshop, Illustrator, CorelDRAW, brand identity design, logo creation, typography, and print/digital media production workflows.","url":"graphical_designing.html","category":"Creative"},{"title":"Machine Learning","desc":"Master predictive analytics and statistical learning. This course provides comprehensive training in mathematical algorithms, feature selection, data preprocessing, and model evaluation using tools like TensorFlow, PyTorch, and Scikit-Learn.","url":"machine_learning.html","category":"Data & AI"},{"title":"Multimedia & Animation","desc":"Learn the convergence of animation, audio, video, and interactive media. Cover 2D/3D animation, motion graphics, audio-video editing, multimedia presentation design, and broadcast graphics workflows.","url":"multi_animat.html","category":"Animation"},{"title":"Python Development","desc":"Full stack developers are in high demand because they can wear many hats. They can often take on multiple roles within a team, making them valuable assets to any organization.","url":"python_development.html","category":"Development"},{"title":"Software Testing","desc":"Acquire the skills to build error-free, production-grade software. This course spans manual testing principles, test case design methodologies, bug reporting, and Selenium-based automation frameworks used by top QA engineers globally.","url":"software_testing.html","category":"QA Engineering"},{"title":"UI / UX Design","desc":"Author premium, interactive user journeys used by global product companies. Master user research, wireframing, high-fidelity mockups, prototyping, usability testing, and design system creation in Figma.","url":"ui_ux.html","category":"Creative"},{"title":"Visual Effects","desc":"Enter the cinematic world of VFX. Learn professional compositing, chroma keying, rotoscoping, matchmoving, and visual integration techniques used in blockbuster films, gaming, and digital advertising studios.","url":"visual_effects.html","category":"VFX"}];</script>
+  <!-- Scroll To Top -->
+  <button class="scroll-top" id="scroll-top" aria-label="Top">↑</button>
 
-  <!-- Scripts -->
-  <script src="assets/js/main.js?v=3.0"></script>
+  <script>window.QAROO_COURSES=[{"title":"2D Animation","category":"Creative & VFX","url":"2d_animation.html"},{"title":"3D Animation","category":"Creative & VFX","url":"3d_animation.html"},{"title":"Artificial Intelligence","category":"Data & AI","url":"ai_intelligence.html"},{"title":"Business Analytics","category":"Data & AI","url":"business_analytics.html"},{"title":"Cyber Security","category":"Security & QA","url":"cyber_security.html"},{"title":"Data Science & Analytics","category":"Data & AI","url":"data_science.html"},{"title":"Digital Marketing","category":"Creative & VFX","url":"digital_marketing.html"},{"title":"Ethical Hacking","category":"Security & QA","url":"ethical_hacking.html"},{"title":"Full Stack Development","category":"Engineering","url":"full_stack.html"},{"title":"Full Stack (Java)","category":"Engineering","url":"full_stack_java.html"},{"title":"Graphic Designing","category":"Creative & VFX","url":"graphical_designing.html"},{"title":"Machine Learning","category":"Data & AI","url":"machine_learning.html"},{"title":"Multimedia & Animation","category":"Creative & VFX","url":"multi_animat.html"},{"title":"Python Development","category":"Engineering","url":"python_development.html"},{"title":"Software Testing","category":"Security & QA","url":"software_testing.html"},{"title":"UI / UX Design","category":"Creative & VFX","url":"ui_ux.html"},{"title":"Visual Effects (VFX)","category":"Creative & VFX","url":"visual_effects.html"}];</script>
+  <script src="assets/js/main.js?v=8.0"></script>
 </body>
 </html>

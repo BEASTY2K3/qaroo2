@@ -1,156 +1,166 @@
-/* =========================================================
-   QAROO 3 — MAIN JAVASCRIPT (WIX DAVON TEMPLATE STYLE)
-   ========================================================= */
+/* ═══════════════════════════════════════════════
+   QAROO — EDITORIAL DARK-TECH — MAIN.JS v8.0
+   ═══════════════════════════════════════════════ */
 
-document.addEventListener('DOMContentLoaded', () => {
+(function () {
+  'use strict';
 
-  // ── 1. HEADER SCROLL EFFECT ─────────────────────────────
-  const header = document.querySelector('.site-header');
-  if (header) {
-    const onScroll = () => {
-      header.classList.toggle('scrolled', window.scrollY > 40);
-    };
+  /* ── Scroll Progress ────────────────────────── */
+  const prog = document.getElementById('scroll-progress');
+  if (prog) {
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement;
+      prog.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
+    }, { passive: true });
+  }
+
+  /* ── Preloader ──────────────────────────────── */
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const p = document.getElementById('preloader');
+      if (p) p.classList.add('done');
+    }, 1400);
+  });
+
+  /* ── Sticky Nav ─────────────────────────────── */
+  const nav = document.getElementById('main-nav');
+  if (nav) {
+    const onScroll = () => nav.classList.toggle('solid', window.scrollY > 40);
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   }
 
-  // ── 2. MOBILE DRAWER ────────────────────────────────────
-  const burgerBtn    = document.getElementById('burger-btn');
-  const drawer       = document.getElementById('mobile-drawer');
-  const drawerOverlay = document.getElementById('drawer-overlay');
-  const drawerClose  = document.getElementById('drawer-close');
-
-  const openDrawer = () => {
-    drawer?.classList.add('open');
-    drawerOverlay?.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  };
-  const closeDrawer = () => {
-    drawer?.classList.remove('open');
-    drawerOverlay?.classList.remove('open');
-    document.body.style.overflow = '';
-  };
-
-  burgerBtn?.addEventListener('click', openDrawer);
-  drawerClose?.addEventListener('click', closeDrawer);
-  drawerOverlay?.addEventListener('click', closeDrawer);
-
-  // ── 3. SEARCH OVERLAY ───────────────────────────────────
-  const searchTrigger = document.getElementById('search-trigger');
-  const searchOverlay = document.getElementById('search-overlay');
-  const searchClose   = document.getElementById('search-close');
-  const searchInput   = document.getElementById('search-input');
-  const searchResults = document.getElementById('search-results');
-
-  const openSearch = () => {
-    searchOverlay?.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    setTimeout(() => searchInput?.focus(), 150);
-  };
-  const closeSearch = () => {
-    searchOverlay?.classList.remove('open');
-    document.body.style.overflow = '';
-    if (searchInput) searchInput.value = '';
-    if (searchResults) searchResults.innerHTML = '';
-  };
-
-  searchTrigger?.addEventListener('click', openSearch);
-  searchClose?.addEventListener('click', closeSearch);
-  searchOverlay?.addEventListener('click', (e) => {
-    if (e.target === searchOverlay) closeSearch();
+  /* ── Active nav link ────────────────────────── */
+  const page = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-menu a').forEach(a => {
+    if ((a.getAttribute('href') || '') === page) a.classList.add('active');
   });
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') { closeSearch(); closeDrawer(); }
-  });
-
-  // Live Search
-  searchInput?.addEventListener('input', () => {
-    const q = searchInput.value.toLowerCase().trim();
-    if (!q || !window.QAROO_COURSES || !searchResults) {
-      if (searchResults) searchResults.innerHTML = '';
-      return;
-    }
-    const matches = window.QAROO_COURSES.filter(c =>
-      c.title.toLowerCase().includes(q) || c.desc.toLowerCase().includes(q)
-    );
-    if (!matches.length) {
-      searchResults.innerHTML = `<div class="search-result-item"><p class="search-result-desc">No courses found for "${q}"</p></div>`;
-      return;
-    }
-    searchResults.innerHTML = matches.slice(0, 8).map(c => `
-      <div class="search-result-item">
-        <a href="${c.url}">
-          <p class="search-result-title">${c.title}</p>
-          <p class="search-result-desc">${c.desc.substring(0, 90)}...</p>
-        </a>
-      </div>
-    `).join('');
-  });
-
-  // ── 4. SCROLL REVEAL ANIMATIONS ─────────────────────────
-  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-  if (revealEls.length) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    revealEls.forEach(el => observer.observe(el));
+  /* ── Mobile Drawer ──────────────────────────── */
+  const burger = document.getElementById('nav-burger');
+  const drawer = document.getElementById('m-drawer');
+  const dClose = document.getElementById('drawer-close');
+  if (burger && drawer) {
+    burger.addEventListener('click', () => { drawer.classList.add('open'); document.body.style.overflow = 'hidden'; });
+  }
+  if (dClose && drawer) {
+    dClose.addEventListener('click', () => { drawer.classList.remove('open'); document.body.style.overflow = ''; });
   }
 
-  // ── 5. ACTIVE NAV LINK ──────────────────────────────────
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-link').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-      link.classList.add('active');
-    }
-  });
+  /* ── Search ─────────────────────────────────── */
+  const sTrigger  = document.getElementById('search-trigger');
+  const sOverlay  = document.getElementById('search-overlay');
+  const sClose    = document.getElementById('search-close');
+  const sInput    = document.getElementById('search-input');
+  const sResults  = document.getElementById('search-results');
 
-  // ── 6. SMOOTH COUNT-UP ON STATS ─────────────────────────
+  function openSearch()  { sOverlay && sOverlay.classList.add('open'); setTimeout(() => sInput && sInput.focus(), 80); }
+  function closeSearch() {
+    sOverlay && sOverlay.classList.remove('open');
+    if (sInput)   sInput.value = '';
+    if (sResults) sResults.innerHTML = '';
+  }
+
+  sTrigger && sTrigger.addEventListener('click', openSearch);
+  sClose   && sClose.addEventListener('click', closeSearch);
+  sOverlay && sOverlay.addEventListener('click', e => { if (e.target === sOverlay) closeSearch(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSearch(); if ((e.metaKey||e.ctrlKey) && e.key === 'k') { e.preventDefault(); openSearch(); } });
+
+  if (sInput && sResults) {
+    sInput.addEventListener('input', () => {
+      const q = sInput.value.trim().toLowerCase();
+      if (!q || !window.QAROO_COURSES) { sResults.innerHTML = ''; return; }
+      const hits = window.QAROO_COURSES.filter(c =>
+        c.title.toLowerCase().includes(q) || (c.category||'').toLowerCase().includes(q)
+      ).slice(0, 7);
+      if (!hits.length) {
+        sResults.innerHTML = '<div style="padding:18px 20px;font-size:13px;color:rgba(255,255,255,0.25);font-family:var(--mono);">No programs found.</div>';
+        return;
+      }
+      sResults.innerHTML = hits.map(c => `
+        <a href="${c.url}" class="s-item">
+          <div class="s-ico">📚</div>
+          <div>
+            <div class="s-title">${c.title}</div>
+            <div class="s-cat">${c.category}</div>
+          </div>
+        </a>`).join('');
+    });
+  }
+
+  /* ── Scroll-to-top ──────────────────────────── */
+  const stopBtn = document.getElementById('scroll-top');
+  if (stopBtn) {
+    window.addEventListener('scroll', () => stopBtn.classList.toggle('vis', window.scrollY > 500), { passive: true });
+    stopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }
+
+  /* ── Reveal on Scroll ───────────────────────── */
+  const rvEls = document.querySelectorAll('.rv');
+  if (rvEls.length && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    rvEls.forEach(el => io.observe(el));
+  }
+
+  /* ── Counter Animation ──────────────────────── */
+  function countUp(el, to, dur = 2000) {
+    let start = 0; const step = to / (dur / 16);
+    const tick = () => {
+      start = Math.min(start + step, to);
+      el.textContent = Math.floor(start).toLocaleString('en-IN') + (el.dataset.suffix || '');
+      if (start < to) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
   const counters = document.querySelectorAll('[data-count]');
-  if (counters.length) {
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        const el = entry.target;
-        const target = parseInt(el.dataset.count, 10);
-        const suffix = el.dataset.suffix || '';
-        const duration = 1800;
-        const start = performance.now();
-        const update = (time) => {
-          const elapsed = time - start;
-          const progress = Math.min(elapsed / duration, 1);
-          const eased = 1 - Math.pow(1 - progress, 3);
-          el.textContent = Math.floor(eased * target).toLocaleString() + suffix;
-          if (progress < 1) requestAnimationFrame(update);
-        };
-        requestAnimationFrame(update);
-        counterObserver.unobserve(el);
-      });
-    }, { threshold: 0.5 });
-    counters.forEach(el => counterObserver.observe(el));
+  if (counters.length && 'IntersectionObserver' in window) {
+    const cio = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { countUp(e.target, +e.target.dataset.count); cio.unobserve(e.target); } });
+    }, { threshold: 0.6 });
+    counters.forEach(el => cio.observe(el));
   }
 
-  // ── 7. FORM SUBMISSION ───────────────────────────────────
-  document.querySelectorAll('form[data-qaroo-form]').forEach(form => {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const btn = form.querySelector('button[type="submit"]');
-      const original = btn?.textContent;
-      if (btn) { btn.textContent = 'Sending...'; btn.disabled = true; }
-      setTimeout(() => {
-        if (btn) { btn.textContent = '✓ Submitted!'; btn.style.background = '#22c55e'; }
-        setTimeout(() => {
-          if (btn) { btn.textContent = original; btn.disabled = false; btn.style.background = ''; }
-          form.reset();
-        }, 3000);
-      }, 1200);
+  /* ── Course Row Image Follow Mouse ─────────── */
+  document.querySelectorAll('.course-row').forEach(row => {
+    const img = row.querySelector('.course-row-img');
+    if (!img) return;
+    row.addEventListener('mousemove', e => {
+      img.style.left = (e.clientX + 20) + 'px';
+      img.style.top  = (e.clientY - 80) + 'px';
     });
   });
 
-});
+  /* ── Course Filter ──────────────────────────── */
+  const lfBtns = document.querySelectorAll('.lf');
+  const cRows  = document.querySelectorAll('.course-row[data-cat]');
+  if (lfBtns.length && cRows.length) {
+    lfBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        lfBtns.forEach(b => b.classList.remove('on'));
+        btn.classList.add('on');
+        const cat = btn.dataset.cat;
+        cRows.forEach(r => {
+          const show = cat === 'all' || r.dataset.cat === cat;
+          r.style.display = show ? '' : 'none';
+        });
+      });
+    });
+  }
+
+  /* ── Forms ──────────────────────────────────── */
+  document.querySelectorAll('[data-qform]').forEach(form => {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"],.cd-submit,.co-submit');
+      if (btn) {
+        const orig = btn.textContent;
+        btn.textContent = 'Sent ✓';
+        btn.style.background = '#16a34a';
+        setTimeout(() => { btn.textContent = orig; btn.style.background = ''; form.reset(); }, 3000);
+      }
+    });
+  });
+
+})();
